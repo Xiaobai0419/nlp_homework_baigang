@@ -140,19 +140,18 @@ pred_period, pred_len, prefixes = 50, 50, ['爱像一阵风', '离开有你的�
 
 '''
 采用随机采样训练模型并创作歌词
-'''
+
 train_and_predict_rnn(rnn, get_params, init_rnn_state, num_hiddens,
                       vocab_size, ctx, corpus_indices, idx_to_char,
                       char_to_idx, True, num_epochs, num_steps, lr,
                       clipping_theta, batch_size, pred_period, pred_len,
                       prefixes)
-
+'''
 '''
 采用相邻采样训练模型并创作歌词
-
+'''
 train_and_predict_rnn(rnn, get_params, init_rnn_state, num_hiddens,
                       vocab_size, ctx, corpus_indices, idx_to_char,
                       char_to_idx, False, num_epochs, num_steps, lr,
                       clipping_theta, batch_size, pred_period, pred_len,
                       prefixes)
-'''
